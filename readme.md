@@ -40,11 +40,23 @@ Como doesn't provide any keybinding, you can make your own keybinding with the f
 
 For example: <br>
 ```vim
-nmap <leader>k <Plug>(Como-move-above)
-nmap <leader>j <Plug>(Como-move-below)
 nmap <leader>h <Plug>(Como-copy-above)
 nmap <leader>l <Plug>(Como-copy-below)
+nmap <leader>k <Plug>(Como-move-above)
+nmap <leader>j <Plug>(Como-move-below)
 ```
+
+Please keep in mind that the `move-above` or `copy-above` mapping is for the above current line, and `move-below` or `copy-below` mapping is for the below current line. So, let's say you want to move or copy the current line above the line below the current line, then look to the count above those target line. Watch the demo over and over again, and if you still confused, please ask by opening new issue with title `[Question] your-question` or maybe try it out yourself.
+
+## FAQ
+
+- Why use this kind of mapping?
+
+> This kind of mapping is for simplicity and consistency, also I'm not sure how to tell vim to move or copy using count to above or below the target line without adding more mapping. Imagine you need to make 4 more mapping because of specific above or below line, ugh. If you have some kind of solution, please don't hesitate to contact me by opening new issue.
+
+- Why only normal mode command?
+
+> I found some inconsistent behaviour when using visual mode with this kind of method. If the user select the line from bottom to top (the cursor position on the first selection) then using the count will behave like normal mode mapping, but if the user use visual mode from top to bottom (the cursor position on the last selection) then using the count will not behave like normal mode mapping. It was because it took the first selection line position instead of current line position when using count. If you have some suggestion, please don't hesitate to contact me by opening new issue.
 
 ## Credits
 
