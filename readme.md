@@ -32,7 +32,7 @@ call minpac#add('bruhtus/vim-como')
 
 ## Usage
 
-Como doesn't provide any keybinding, you can make your own keybinding with the four `<Plug>` mapping that como provide:
+Como doesn't provide any keybinding, you can make your own keybinding with the four `<Plug>` mapping that Como provide:
 - `<Plug>(Como-copy-above)`
 - `<Plug>(Como-copy-below)`
 - `<Plug>(Como-move-above)`
@@ -46,7 +46,7 @@ nmap <leader>k <Plug>(Como-move-above)
 nmap <leader>j <Plug>(Como-move-below)
 ```
 
-Please keep in mind that the `move-above` or `copy-above` mapping is for the above current line, and `move-below` or `copy-below` mapping is for the below current line. So, let's say you want to move or copy the current line above the line below the current line, then look to the count above those target line. Watch the demo over and over again, and if you still confused, please ask by opening new issue with title `[Question] your-question` or maybe try it out yourself.
+Please keep in mind that the `copy-above` or `move-above` mapping is for the above current line, and `copy-below` or `move-below` mapping is for the below current line. So, let's say you want to move or copy the current line above the line below the current line, then look to the count above those target line. Watch the demo over and over again, and if you still confused, please ask by opening new issue with title `[Question] your-question` or maybe try it out yourself.
 
 If you did not use count, Como will copy the current line below or above the current line and move the current line above or below one line from the current line.
 
