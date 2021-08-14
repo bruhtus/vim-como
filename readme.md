@@ -1,6 +1,6 @@
 # como.vim
 
-Como is a plugin to copy or move one line into another line without cluttering the unnamed vim register (`"`). Como also took count, so Como not only copy or move line to above or below current line, Como also copy or move the line `[count]` above or below the current line. Also, Como save the previous position on jumplist so you can come back to previous line using `CTRL-O`.
+Como is a plugin to copy or move one line into another line without cluttering the unnamed vim register (`"`). Como also took count, so Como not only copy or move line to above or below current line, Como also copy or move the line `[count]` above or below the current line. Also, Como save the previous position on jumplist so you can come back to previous line using `CTRL-O` (Como did not save the jumplist if the user only copy or move the current line above or below the current line, not using count).
 
 ## Demo
 
