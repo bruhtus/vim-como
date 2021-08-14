@@ -48,6 +48,8 @@ nmap <leader>j <Plug>(Como-move-below)
 
 Please keep in mind that the `move-above` or `copy-above` mapping is for the above current line, and `move-below` or `copy-below` mapping is for the below current line. So, let's say you want to move or copy the current line above the line below the current line, then look to the count above those target line. Watch the demo over and over again, and if you still confused, please ask by opening new issue with title `[Question] your-question` or maybe try it out yourself.
 
+If you did not use count, Como will copy the current line below or above the current line and move the current line above or below one line from the current line.
+
 ## FAQ
 
 - Why use this kind of mapping?
