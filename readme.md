@@ -58,7 +58,7 @@ If you did not use count, Como will copy the current line below or above the cur
 
 - Why only normal mode command?
 
-> I found some inconsistent behaviour when using visual mode with this kind of method. If the user select the line from bottom to top (the cursor position on the first selection) then using the count will behave like normal mode mapping, but if the user use visual mode from top to bottom (the cursor position on the last selection) then using the count will not behave like normal mode mapping. It was because it took the first selection line position instead of current line position when using count. If you have some suggestion, please don't hesitate to contact me by opening new issue or create PR.
+> I found some inconsistent behaviour when using visual mode with this kind of method. If the user select the line from bottom to top (the cursor position on the first selection) then using the count will behave like normal mode mapping, but if the user use visual mode from top to bottom (the cursor position on the last selection) then using the count will not behave like normal mode mapping. It was because it took the first selection line position instead of current line position when using count. You can check the example on the [devel branch](https://github.com/bruhtus/vim-como/tree/devel). If you have some suggestion, please don't hesitate to contact me by opening new issue or create PR.
 
 ## Credits
 
