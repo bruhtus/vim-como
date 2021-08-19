@@ -60,6 +60,14 @@ If you did not use count, Como will copy the current line below or above the cur
 
 > I found some inconsistent behaviour when using visual mode with this kind of method. If the user select the line from bottom to top (the cursor position on the first selection) then using the count will behave like normal mode mapping, but if the user use visual mode from top to bottom (the cursor position on the last selection) then using the count will not behave like normal mode mapping. It was because it took the first selection line position instead of current line position when using count. You can check the example on the [devel branch](https://github.com/bruhtus/vim-como/tree/devel). If you have some suggestion, please don't hesitate to contact me by opening new issue or create PR.
 
+- What's the difference between this and `vim-unimpaired`?
+
+> I made this before I knew about `vim-unimpaired`. `vim-unimpaired` already have the moving feature but it lack the copy feature (there's a PR but haven't got merged, you can take a look [here](https://github.com/tpope/vim-unimpaired/pull/138)). Maybe you can say that `vim-como` is the simplified version of `vim-unimpaired` and with less battle-tested. For example, `vim-como` probably won't be able to copy or move with fold. I haven't tested it yet and I'm not sure how to make that works.
+
 ## Credits
 
 - [vim-galore](https://github.com/mhinz/vim-galore).
+
+## Related
+
+- [vim-unimpaired](https://github.com/tpope/vim-unimpaired).
