@@ -60,7 +60,7 @@ If you did not use count, Como will copy the current line below or above the cur
 
 > I made this before I knew about `vim-unimpaired`. `vim-unimpaired` already have the moving feature but it lack the copy feature (there's a PR but haven't got merged, you can take a look [here](https://github.com/tpope/vim-unimpaired/pull/138)). Maybe you can say that `vim-como` is the simplified version of `vim-unimpaired` and with less battle-tested. For example, `vim-como` probably won't be able to copy or move with fold. I haven't tested it yet and I'm not sure how to make that works.
 
-- Why the indentation not consistent?
+- Why the indentation inconsistent?
 
 > For the indentation, this plugin use `==` Normal mode command. According to one of [tpope's comment](https://github.com/tpope/vim-unimpaired/issues/23#issuecomment-10262005) indenting algorithms have bugs and you can't really count on `=`. I don't have any alternative at the moment.
 
