@@ -62,7 +62,7 @@ If you did not use count, Como will copy the current line below or above the cur
 
 - Why the indentation inconsistent?
 
-> For the indentation, this plugin use `==` Normal mode command. According to one of [tpope's comment](https://github.com/tpope/vim-unimpaired/issues/23#issuecomment-10262005) indenting algorithms have bugs and you can't really count on `=`. I don't have any alternative at the moment.
+> For the indentation, this plugin use `==` Normal mode command. According to one of [tpope's comment](https://github.com/tpope/vim-unimpaired/issues/23#issuecomment-10262005), indenting algorithms have bugs and you can't really count on `=`. I don't have any alternative at the moment.
 
 ## Credits
 
