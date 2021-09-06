@@ -71,3 +71,5 @@ If you did not use count, Como will copy the current line below or above the cur
 ## Related
 
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired).
+- [vim-textmanip](https://github.com/t9md/vim-textmanip).
+- [vim-move](https://github.com/matze/vim-move).
