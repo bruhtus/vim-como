@@ -26,3 +26,19 @@ nnoremap <expr> <silent> <Plug>(Como-move-above)
 nnoremap <expr> <silent> <Plug>(Como-move-below)
       \ (v:count1 > 1 ? "m'" . v:count1 : '')
       \ . ":<C-u>execute 'lockmarks move +' . v:count1<CR>=="
+
+xnoremap <expr> <silent> <Plug>(VComo-copy-above)
+      \ (v:count > 0 ? "m'" . v:count : '')
+      \ . ':<C-u>execute "' . "'<,'>t '<-1-" . '" . v:count<CR>'
+
+xnoremap <expr> <silent> <Plug>(VComo-copy-below)
+      \ (v:count > 0 ? "m'" . v:count : '')
+      \ . ':<C-u>execute "' . "'<,'>t '>+" . '" . v:count<CR>'
+
+xnoremap <expr> <silent> <Plug>(VComo-move-above)
+      \ (v:count1 > 1 ? ':<C-u>execute "' . "'<-1k' <Bar> " : ':<C-u>execute "')
+      \ . "'<,'>move '<-1-" . '" . v:count1<CR>gv==gv'
+
+xnoremap <expr> <silent> <Plug>(VComo-move-below)
+      \ (v:count1 > 1 ? ':<C-u>execute "' . "'>+1k' <Bar> " : ':<C-u>execute "')
+      \ . "'<,'>move '>+" . '" . v:count1<CR>gv==gv'
