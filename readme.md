@@ -32,18 +32,29 @@ call minpac#add('bruhtus/vim-como')
 
 ## Usage
 
-Como doesn't provide any keybinding, you can make your own keybinding with the four `<Plug>` mapping that Como provide:
+Como doesn't provide any keybinding, you can make your own keybinding with the eight `<Plug>` mapping that Como provide:
 - `<Plug>(Como-copy-above)`
 - `<Plug>(Como-copy-below)`
 - `<Plug>(Como-move-above)`
 - `<Plug>(Como-move-below)`
+- `<Plug>(VComo-copy-above)`
+- `<Plug>(VComo-copy-below)`
+- `<Plug>(VComo-move-above)`
+- `<Plug>(VComo-move-below)`
 
 For example: <br>
 ```vim
+" normal mode mapping
 nmap <leader>h <Plug>(Como-copy-above)
 nmap <leader>l <Plug>(Como-copy-below)
 nmap <leader>k <Plug>(Como-move-above)
 nmap <leader>j <Plug>(Como-move-below)
+
+" visual selection mode mapping
+xmap <leader>h <Plug>(VComo-copy-above)
+xmap <leader>l <Plug>(VComo-copy-below)
+xmap <leader>k <Plug>(VComo-move-above)
+xmap <leader>j <Plug>(VComo-move-below)
 ```
 
 Please keep in mind that the `copy-above` or `move-above` mapping is for the above current line, and `copy-below` or `move-below` mapping is for the below current line. So, let's say you want to move or copy the current line above the line below the current line, then look to the count above those target line. Watch the demo over and over again, and if you still confused, please ask by opening new issue with title `[Question] your-question` or maybe try it out yourself.
@@ -54,7 +65,7 @@ If you did not use count, Como will copy the current line below or above the cur
 
 - Why use this kind of mapping?
 
-> This kind of mapping is for simplicity and consistency, also I'm not sure how to tell vim to move or copy using count to above or below the target line without adding more mapping. Imagine you need to make 4 more mapping because of specific above or below line, ugh. If you have some kind of solution, please don't hesitate to contact me by opening new issue or create PR.
+> This kind of mapping is for simplicity and consistency, also I'm not sure how to tell vim to move or copy using count to above or below the target line without adding more mapping. Imagine you need to make more mapping because of specific above or below line, ugh. If you have some kind of solution, please don't hesitate to contact me by create new PR or opening new issue.
 
 - What's the difference between this and `vim-unimpaired`?
 
@@ -63,6 +74,10 @@ If you did not use count, Como will copy the current line below or above the cur
 - Why the indentation inconsistent?
 
 > For the indentation, this plugin use `==` Normal mode command. According to one of [tpope's comment](https://github.com/tpope/vim-unimpaired/issues/23#issuecomment-10262005), indenting algorithms have bugs and you can't really count on `=`. I don't have any alternative at the moment.
+
+- Why the visual selection disappear after copying the selection?
+
+> The `gv` normal mode command select the previous visual selection. So, if Como use `gv` inside of visual selection mapping, it will select the previous visual selection rather than the newly created line (the copied line). If you have any suggestion, please let me know by create new PR or opening new issue.
 
 ## Credits
 
