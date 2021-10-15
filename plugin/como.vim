@@ -7,7 +7,7 @@
 " Description:
 " copy or move one line with a count and without cluttering vim register
 
-if exists('g:loaded_como') || exists(':lockmarks') != 2
+if exists('g:loaded_como')
   finish
 endif
 
@@ -20,12 +20,12 @@ nnoremap <expr> <silent> <Plug>(Como-copy-below)
       \ (v:count > 0 ? "m'" . v:count : '') . ":<C-u>execute 't +'. v:count<CR>=="
 
 nnoremap <expr> <silent> <Plug>(Como-move-above)
-      \ (v:count1 > 1 ? "m'" . v:count1 : '')
-      \ . ":<C-u>execute 'lockmarks move -1-' . v:count1<CR>=="
+      \ (v:count1 > 1 ? ':<C-u>execute "' . "-1k' <Bar> " : ':<C-u>execute "')
+      \ . 'move -1-" . v:count1<CR>'
 
 nnoremap <expr> <silent> <Plug>(Como-move-below)
-      \ (v:count1 > 1 ? "m'" . v:count1 : '')
-      \ . ":<C-u>execute 'lockmarks move +' . v:count1<CR>=="
+      \ (v:count1 > 1 ? ':<C-u>execute "' . "+1k' <Bar> " : ':<C-u>execute "')
+      \ . 'move +" . v:count1<CR>'
 
 xnoremap <expr> <silent> <Plug>(VComo-copy-above)
       \ (v:count > 0 ? "m'" . v:count : '')
