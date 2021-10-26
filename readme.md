@@ -79,6 +79,10 @@ If you did not use count, Como will copy the current line below or above the cur
 
 > The `gv` normal mode command select the previous visual selection. So, if Como use `gv` inside of visual selection mapping, it will select the previous visual selection rather than the newly created line (the copied line). If you have any suggestion, please let me know by create new PR or opening new issue.
 
+- Why the visual mapping not respecting the relative line number?
+
+> Please read [tpope's comment](https://github.com/tpope/vim-unimpaired/issues/216#issuecomment-902318171) for that.
+
 ## Credits
 
 - [vim-galore](https://github.com/mhinz/vim-galore).
