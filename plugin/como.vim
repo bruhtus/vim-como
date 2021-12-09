@@ -21,11 +21,11 @@ nnoremap <expr> <silent> <Plug>(Como-copy-below)
 
 nnoremap <expr> <silent> <Plug>(Como-move-above)
       \ (v:count1 > 1 ? ':<C-u>execute "' . "-1k' <Bar> " : ':<C-u>execute "')
-      \ . 'move -1-" . v:count1<CR>'
+      \ . 'move -1-" . v:count1<CR>=='
 
 nnoremap <expr> <silent> <Plug>(Como-move-below)
       \ (v:count1 > 1 ? ':<C-u>execute "' . "+1k' <Bar> " : ':<C-u>execute "')
-      \ . 'move +" . v:count1<CR>'
+      \ . 'move +" . v:count1<CR>=='
 
 xnoremap <expr> <silent> <Plug>(VComo-copy-above)
       \ (v:count > 0 ? "m'" . v:count : '')
