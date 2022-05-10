@@ -29,11 +29,11 @@ nnoremap <expr> <silent> <Plug>(Como-move-below)
 
 xnoremap <expr> <silent> <Plug>(VComo-copy-above)
       \ (v:count > 0 ? "m'" . v:count : '')
-      \ . ':<C-u>execute "' . "'<,'>t '<-1-" . '" . v:count<CR>'
+      \ . ':<C-u>execute "' . "'<,'>t '<-1-" . '" . v:count<CR>' . "'[V']"
 
 xnoremap <expr> <silent> <Plug>(VComo-copy-below)
       \ (v:count > 0 ? "m'" . v:count : '')
-      \ . ':<C-u>execute "' . "'<,'>t '>+" . '" . v:count<CR>'
+      \ . ':<C-u>execute "' . "'<,'>t '>+" . '" . v:count<CR>' . "'[V']"
 
 xnoremap <expr> <silent> <Plug>(VComo-move-above)
       \ (v:count1 > 1 ? ':<C-u>execute "' . "'<-1k' <Bar> " : ':<C-u>execute "')
