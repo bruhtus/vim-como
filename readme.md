@@ -75,10 +75,6 @@ If you did not use count, Como will copy the current line below or above the cur
 
 > For the indentation, this plugin use `==` Normal mode command. According to one of [tpope's comment](https://github.com/tpope/vim-unimpaired/issues/23#issuecomment-10262005), indenting algorithms have bugs and you can't really count on `=`. I don't have any alternative at the moment.
 
-- Why the visual selection disappear after copying the selection?
-
-> The `gv` normal mode command select the previous visual selection. So, if Como use `gv` inside of visual selection mapping, it will select the previous visual selection rather than the newly created line (the copied line). If you have any suggestion, please let me know by create new PR or opening new issue.
-
 - Why the visual mapping not respecting the relative line number?
 
 > Please read [tpope's comment](https://github.com/tpope/vim-unimpaired/issues/216#issuecomment-902318171) for that.
